@@ -1,0 +1,1 @@
+﻿Place in this folder all the Application service modules that end their AssemblyName with 'Plugin' word and implement the required types
