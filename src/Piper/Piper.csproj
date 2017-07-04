@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommandLine, Version=1.9.71.2, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.1.9.71\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -50,12 +53,18 @@
     <Reference Include="Topshelf.Log4Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b800c4cfcdeea87b, processorArchitecture=MSIL">
       <HintPath>..\packages\Topshelf.Log4Net.4.0.3\lib\net452\Topshelf.Log4Net.dll</HintPath>
     </Reference>
+    <Reference Include="YamlDotNet, Version=4.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YamlDotNet.4.2.1\lib\net35\YamlDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultPlugins\Input\FromFileStrategyFactory.cs" />
-    <Compile Include="DefaultPlugins\Input\FromFileStrategy.cs" />
+    <Compile Include="CommandLineOptions\CliOptions.cs" />
+    <Compile Include="CommandLineOptions\IOptions.cs" />
+    <Compile Include="DefaultPlugins\Input\LogFileInputStrategyFactory.cs" />
+    <Compile Include="DefaultPlugins\Input\LogFileInputStrategy.cs" />
     <Compile Include="DefaultPlugins\Output\ToHttpApiStrategyStrategy.cs" />
     <Compile Include="DefaultPlugins\Output\ToHttpApiStrategy.cs" />
+    <Compile Include="PiperConfig.cs" />
     <Compile Include="ServiceContainer.cs" />
     <Compile Include="ConfigureServiceHost.cs" />
     <Compile Include="Logger.cs" />
@@ -68,6 +77,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <Content Include="piper.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

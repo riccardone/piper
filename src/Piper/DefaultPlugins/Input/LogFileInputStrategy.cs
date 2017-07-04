@@ -3,7 +3,7 @@ using Piper.PluginModel;
 
 namespace Piper.DefaultPlugins.Input
 {
-    public class FromFileStrategy : IServiceStrategy
+    public class LogFileInputStrategy : IServiceStrategy
     {
         public bool Start()
         {

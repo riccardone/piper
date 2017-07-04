@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            ConfigureServiceHost.Configure();
+            ConfigureServiceHost.Configure(args);
         }
     }
 }

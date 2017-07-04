@@ -1,0 +1,4 @@
+﻿- input: myfirsttest
+  paths: ['d:/inbound/logs/*.log']
+- output: tomyfirstapi  
+  hosts: ['http://localhost:4200']
